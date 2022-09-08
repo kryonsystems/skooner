@@ -17,6 +17,8 @@ on:
 env:
   REGISTRY: docker.io
   IMAGE_NAME: ${{ github.repository }}
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  DOCKERHUB_ACTOR: ${{ secrets.DOCKERHUB_ACTOR }}
 
 jobs:
   build-and-push-image:
