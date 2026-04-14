@@ -37,11 +37,13 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      # OriginalCodeVersion=[v2] DigestResolvedVersion=[v2.7.0] Security: Pinned to SHA for supply chain protection. Full SHA is required.
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      # OriginalCodeVersion=[v1] DigestResolvedVersion=[v1.1.39] Security: Pinned to SHA for supply chain protection. Full SHA is required.
+      uses: github/codeql-action/init@231aa2c8a89117b126725a0e11897209b7118144 # v1.1.39
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
@@ -50,4 +52,5 @@ jobs:
         # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+      # OriginalCodeVersion=[v1] DigestResolvedVersion=[v1.1.39] Security: Pinned to SHA for supply chain protection. Full SHA is required.
+      uses: github/codeql-action/analyze@231aa2c8a89117b126725a0e11897209b7118144 # v1.1.39
